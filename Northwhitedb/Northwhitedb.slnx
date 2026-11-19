@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="Northwhitedb/Northwhitedb.sqlproj">
+  <Project Path="Northwhitedb/Northwhitedb.sqlproj" Id="2c630ad0-39a7-4d44-a379-5d2716af667c">
     <Build />
     <Deploy />
   </Project>
