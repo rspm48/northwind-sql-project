@@ -1,4 +1,16 @@
-﻿CREATE TABLE [dbo].[Orders] (
+﻿/*
+  Tabla: Orders
+  Propósito: cabecera de cada pedido. Guarda quién lo pidió, quién lo atendió,
+             las fechas (pedido, requerido, envío) y los datos de entrega.
+  Relaciones:
+    - Customers  (CustomerID)            -> cliente que hizo el pedido.
+    - Employees  (EmployeeID)            -> empleado que registró el pedido.
+    - Shippers   (ShipVia -> ShipperID)  -> empresa que transporta el pedido.
+    - OrderDetails (OrderID)             -> productos incluidos en el pedido.
+  Nota: los índices duplicados (CustomerID/CustomersOrders y EmployeeID/EmployeesOrders)
+        vienen del NorthWind original y se mantienen para respetar el diseño.
+*/
+CREATE TABLE [dbo].[Orders] (
     [OrderID]        INT           IDENTITY (1, 1) NOT NULL,
     [CustomerID]     NCHAR (5)     NULL,
     [EmployeeID]     INT           NULL,

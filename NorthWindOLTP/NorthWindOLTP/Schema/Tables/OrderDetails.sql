@@ -1,4 +1,19 @@
-﻿CREATE TABLE [dbo].[OrderDetails] (
+﻿/*
+  Tabla: Order Details
+  Propósito: líneas de cada pedido. Una fila por producto vendido, con su precio,
+             cantidad y descuento. La clave primaria es compuesta (OrderID, ProductID),
+             así un producto no se repite dentro del mismo pedido.
+  Relaciones:
+    - Orders   (OrderID)   -> pedido al que pertenece la línea.
+    - Products (ProductID) -> producto vendido.
+  Restricciones: Discount entre 0 y 1, Quantity mayor a 0, UnitPrice no negativo.
+  Nota: los índices duplicados (OrderID/OrdersOrder_Details y ProductID/ProductsOrder_Details)
+        vienen del NorthWind original y se mantienen para respetar su diseño.
+Respecto del Nombre [Order Details]: se mantiene "Order Details" (con espacio), como en el NorthWind original,
+porque varias vistas y procedimientos la referencian así. Lo recomendable
+sería OrderDetails, pero renombrarla obligaría a modificar 7 archivos más que corresponden a la persona 3.
+*/
+CREATE TABLE [dbo].[Order Details] (
     [OrderID]    INT        NOT NULL,
     [ProductID]  INT        NOT NULL,
     [UnitPrice]  MONEY      CONSTRAINT [DF_Order_Details_UnitPrice] DEFAULT ((0)) NOT NULL,
@@ -16,20 +31,20 @@
 
 GO
 CREATE NONCLUSTERED INDEX [OrderID]
-    ON [dbo].[OrderDetails]([OrderID] ASC);
+    ON [dbo].[Order Details]([OrderID] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [OrdersOrder_Details]
-    ON [dbo].[OrderDetails]([OrderID] ASC);
+    ON [dbo].[Order Details]([OrderID] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [ProductID]
-    ON [dbo].[OrderDetails]([ProductID] ASC);
+    ON [dbo].[Order Details]([ProductID] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [ProductsOrder_Details]
-    ON [dbo].[OrderDetails]([ProductID] ASC);
+    ON [dbo].[Order Details]([ProductID] ASC);
 
