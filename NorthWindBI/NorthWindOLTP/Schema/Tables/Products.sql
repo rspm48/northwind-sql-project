@@ -1,4 +1,18 @@
-﻿CREATE TABLE [dbo].[Products] (
+﻿/*
+  Tabla: Products
+  Propósito: catálogo de productos con su precio, existencias y nivel de reposición.
+  Clave primaria: ProductID (autonumérico).
+  Relaciones:
+    - Categories (CategoryID) -> categoría del producto.
+    - Suppliers  (SupplierID) -> proveedor del producto.
+    - OrderDetails (ProductID) -> líneas de pedido donde se vende el producto.
+  Restricciones: UnitPrice, UnitsInStock, UnitsOnOrder y ReorderLevel no pueden ser negativos.
+  Valores por defecto: UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel y Discontinued empiezan en 0.
+  Nota: los índices CategoriesProducts/CategoryID y SuppliersProducts/SupplierID están duplicados;
+        vienen del NorthWind original y se mantienen para respetar su diseño.
+  Revisado por: Rosario Scarlett Prado Mendoza.
+*/
+CREATE TABLE [dbo].[Products] (
     [ProductID]       INT           IDENTITY (1, 1) NOT NULL,
     [ProductName]     NVARCHAR (40) NOT NULL,
     [SupplierID]      INT           NULL,
