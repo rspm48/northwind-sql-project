@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Databases/" />
+  <Folder Name="/Databases/DataWarehouse/" />
+  <Folder Name="/Databases/OLTP/">
+    <Project Path="NorthWindOLTP/NorthWindOLTP.sqlproj">
+      <Build />
+      <Deploy />
+    </Project>
+  </Folder>
+  <Folder Name="/ETL/" />
+  <Folder Name="/OLAP/" />
+</Solution>
