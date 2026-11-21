@@ -1,4 +1,13 @@
-﻿CREATE TABLE [dbo].[Categories] (
+﻿/*
+  Tabla: Categories
+  Propósito: categorías en las que se clasifican los productos (por ejemplo, bebidas o lácteos).
+  Clave primaria: CategoryID (autonumérico).
+  Relaciones:
+    - Products (CategoryID) -> cada producto pertenece a una categoría.
+  Índices: CategoryName, para buscar categorías por nombre.
+  Revisado por: Rosario Scarlett Prado Mendoza.
+*/
+CREATE TABLE [dbo].[Categories] (
     [CategoryID]   INT            IDENTITY (1, 1) NOT NULL,
     [CategoryName] NVARCHAR (15)  NOT NULL,
     [Description]  NVARCHAR (MAX) NULL,
