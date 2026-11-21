@@ -1,4 +1,13 @@
-﻿CREATE TABLE [dbo].[Suppliers] (
+﻿/*
+  Tabla: Suppliers
+  Propósito: proveedores que abastecen los productos, con sus datos de contacto y ubicación.
+  Clave primaria: SupplierID (autonumérico).
+  Relaciones:
+    - Products (SupplierID) -> cada producto lo provee un proveedor.
+  Índices: CompanyName y PostalCode, para búsquedas por empresa y código postal.
+  Revisado por: Rosario Scarlett Prado Mendoza.
+*/
+CREATE TABLE [dbo].[Suppliers] (
     [SupplierID]   INT            IDENTITY (1, 1) NOT NULL,
     [CompanyName]  NVARCHAR (40)  NOT NULL,
     [ContactName]  NVARCHAR (30)  NULL,
