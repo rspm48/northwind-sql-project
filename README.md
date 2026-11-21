@@ -250,4 +250,4 @@ No hace falta tener la base de datos instalada para compilar el proyecto.
 | Integrante 3 | `Edgar ` | Employees, EmployeeTerritories, Territories, Region |
 | Integrante 4 | `Rosario Scarlett Prado Mendoza` | Products, Categories, Suppliers |
 
-El repositorio está alojado en la cuenta `rspm48`, que también creó el proyecto base.
+
