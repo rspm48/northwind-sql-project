@@ -171,7 +171,8 @@ flowchart LR
 ```
 
 1. **Restaurar la base:** se restauró `NorthWind.bak` en SQL Server con SSMS.
-  **Desde SQL Server Management Studio (SSMS):**
+   
+   **Desde SQL Server Management Studio (SSMS):**
    PASO 1. Conectarse a la instancia de SQL Server.
    PASO 2. Clic derecho en **Databases** > **Restore Database...**
    PASO 3. Elegir **Device** y pulsar **...** > **Add** y seleccionar el archivo `NorthWind.bak`.
