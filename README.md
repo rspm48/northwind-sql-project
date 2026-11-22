@@ -158,14 +158,6 @@ erDiagram
 - **Empleados:** un empleado puede reportar a otro (relación consigo misma) y cubre uno o más territorios; los territorios pertenecen a una región.
 - **Clientes:** `CustomerCustomerDemo` es la tabla intermedia entre clientes y sus tipos demográficos.
 
-## Cómo restaurar el NorthWind.bak 
-
-**Desde SQL Server Management Studio (SSMS):**
-1. Conectarse a la instancia de SQL Server.
-2. Clic derecho en **Databases** > **Restore Database...**
-3. Elegir **Device** y pulsar **...** > **Add** y seleccionar el archivo `NorthWind.bak`.
-4. Verificar que el nombre de destino sea `NorthWind` y pulsar **OK**.
-
 ## Cómo se construyó el proyecto
 
 ```mermaid
@@ -179,6 +171,12 @@ flowchart LR
 ```
 
 1. **Restaurar la base:** se restauró `NorthWind.bak` en SQL Server con SSMS.
+  **Desde SQL Server Management Studio (SSMS):**
+   PASO 1. Conectarse a la instancia de SQL Server.
+   PASO 2. Clic derecho en **Databases** > **Restore Database...**
+   PASO 3. Elegir **Device** y pulsar **...** > **Add** y seleccionar el archivo `NorthWind.bak`.
+   PASO 4. Verificar que el nombre de destino sea `NorthWind` y pulsar **OK**.
+ 
 2. **Crear el proyecto:** en Visual Studio se creó una solución `NorthWindBI` con un proyecto `NorthWindOLTP` del tipo *SQL Server Database Project*.
 3. **Importar el esquema:** clic derecho en el proyecto, *Importar > Base de datos*, con estructura por tipo de objeto.
 4. **Depurar:** se eliminaron las vistas y los procedimientos almacenados. Hacían referencia a una tabla llamada `[Order Details]` (con espacio) que en esta base se llama `OrderDetails`, lo que generaba 42 errores de compilación. Como la tarea se centra en las tablas, se descartaron.
