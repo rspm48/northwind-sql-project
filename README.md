@@ -258,5 +258,3 @@ No hace falta tener la base de datos instalada para compilar el proyecto.
 | Integrante 2 | `Telassim Ginnola Gomez Jimenez` | `Ginnola` | Customers, CustomerCustomerDemo, CustomerDemographics |
 | Integrante 3 | `Edgar Polanco Ochoa` | `edgarpolanco17 ` | Employees, EmployeeTerritories, Territories, Region |
 | Integrante 4 | `Rosario Scarlett Prado Mendoza` | `rspm48` | Products, Categories, Suppliers |
-
-
