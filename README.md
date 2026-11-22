@@ -92,6 +92,7 @@ erDiagram
         nvarchar CompanyName
         nvarchar ContactName
         nvarchar City
+        nvarchar Region
         nvarchar Country
         nvarchar Phone
     }
@@ -246,7 +247,7 @@ No hace falta tener la base de datos instalada para compilar el proyecto.
 | Integrante | Usuario de GitHub | Tablas a cargo |
 |---|---|---|
 | Integrante 1 | `Enrique Arce` | Orders, OrderDetails, Shippers |
-| Integrante 2 | `Telassim` | Customers, CustomerCustomerDemo, CustomerDemographics |
+| Integrante 2 | `Telassim Ginnola Gomez Jimenez` | Customers, CustomerCustomerDemo, CustomerDemographics |
 | Integrante 3 | `Edgar ` | Employees, EmployeeTerritories, Territories, Region |
 | Integrante 4 | `Rosario Scarlett Prado Mendoza` | Products, Categories, Suppliers |
 
