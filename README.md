@@ -158,6 +158,14 @@ erDiagram
 - **Empleados:** un empleado puede reportar a otro (relación consigo misma) y cubre uno o más territorios; los territorios pertenecen a una región.
 - **Clientes:** `CustomerCustomerDemo` es la tabla intermedia entre clientes y sus tipos demográficos.
 
+## Cómo restaurar el NorthWind.bak 
+
+**Desde SQL Server Management Studio (SSMS):**
+1. Conectarse a la instancia de SQL Server.
+2. Clic derecho en **Databases** > **Restore Database...**
+3. Elegir **Device** y pulsar **...** > **Add** y seleccionar el archivo `NorthWind.bak`.
+4. Verificar que el nombre de destino sea `NorthWind` y pulsar **OK**.
+
 ## Cómo se construyó el proyecto
 
 ```mermaid
@@ -194,7 +202,7 @@ flowchart LR
 
 ### Reparto de tablas
 
-| Persona | Tablas | Rama |
+| Integrante | Tablas | Rama |
 |---|---|---|
 | 1 | Orders, OrderDetails, Shippers | `tablas-pedidos` |
 | 2 | Customers, CustomerCustomerDemo, CustomerDemographics | `tablas-clientes` |
@@ -244,11 +252,11 @@ No hace falta tener la base de datos instalada para compilar el proyecto.
 
 ## Integrantes
 
-| Integrante | Usuario de GitHub | Tablas a cargo |
-|---|---|---|
-| Integrante 1 | `Enrique Arce` | Orders, OrderDetails, Shippers |
-| Integrante 2 | `Telassim Ginnola Gomez Jimenez` | Customers, CustomerCustomerDemo, CustomerDemographics |
-| Integrante 3 | `Edgar ` | Employees, EmployeeTerritories, Territories, Region |
-| Integrante 4 | `Rosario Scarlett Prado Mendoza` | Products, Categories, Suppliers |
+| Integrante | Nombre | Usuario de GitHub | Tablas a cargo |
+|---|---|---|---|
+| Integrante 1 | `Enrique Alejandro Arce Arce` | `Enrique Arce` | Orders, OrderDetails, Shippers |
+| Integrante 2 | `Telassim Ginnola Gomez Jimenez` | `Ginnola` | Customers, CustomerCustomerDemo, CustomerDemographics |
+| Integrante 3 | `Edgar Polanco Ochoa` | `Edgar ` | Employees, EmployeeTerritories, Territories, Region |
+| Integrante 4 | `Rosario Scarlett Prado Mendoza` | `rspm48` | Products, Categories, Suppliers |
 
 
