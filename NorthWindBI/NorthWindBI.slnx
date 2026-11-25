@@ -1,6 +1,11 @@
 <Solution>
   <Folder Name="/Databases/" />
-  <Folder Name="/Databases/DataWarehouse/" />
+  <Folder Name="/Databases/DataWarehouse/">
+    <Project Path="NorthWindDW/NorthWindDW.sqlproj">
+      <Build />
+      <Deploy />
+    </Project>
+  </Folder>
   <Folder Name="/Databases/OLTP/">
     <Project Path="NorthWindOLTP/NorthWindOLTP.sqlproj">
       <Build />
