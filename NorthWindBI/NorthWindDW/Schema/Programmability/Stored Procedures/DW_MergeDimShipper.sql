@@ -1,10 +1,12 @@
-﻿/*
-  Procedimiento: dbo.DW_MergeDimShipper
-  Responsable: Persona 1
-  Origen: staging.shipper -> dbo.DimShipper
-  Contenido propuesto:
-    UPDATE de DimShipper desde staging.shipper, unido por ShipperSK.
-    Seguir el modelo de DW_MergeDimProduct.
+﻿/* Aplica a DimShipper los cambios de los transportistas que ya existían, tomados de staging.shipper. */
+CREATE PROCEDURE [dbo].[DW_MergeDimShipper]
+AS
+BEGIN
 
-  TODO: reemplazar este comentario por el script real (dejando un comentario corto de propósito).
-*/
+	UPDATE dimShipper
+	SET [CompanyName] = stagingShipper.[CompanyName]
+	   ,[Phone]       = stagingShipper.[Phone]
+	FROM [dbo].[DimShipper]         dimShipper
+	INNER JOIN [staging].[shipper] stagingShipper ON (dimShipper.[ShipperSK] = stagingShipper.[ShipperSK])
+END
+GO
